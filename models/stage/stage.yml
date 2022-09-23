@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: analytics
+    database: analytics
+    schema: analytics
+    tables:
+      - name: inventory
+      - name: invoice
+      - name: prodorders
