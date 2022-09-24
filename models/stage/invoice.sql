@@ -1,6 +1,6 @@
 with convert as (
     select LOCATIONID,
-    LOCATION,
+    TRIM(LOCATION,'" ') as LOCATION,
     DATESOLD,
     TO_VARCHAR(PRODUCTID) as PRODUCTID,
     UNITSSOLD

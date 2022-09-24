@@ -1,9 +1,9 @@
 with convertprods as (
     select LOCATIONID,
-    TO_VARCHAR(PRODID),
+    TO_VARCHAR(PRODID) as PRODID,
     ETAMONTH,
-    TO_VARCHAR(ETADAY),
-    TO_VARCHAR(ETAYEAR),
+    TO_VARCHAR(ETADAY) as ETADAY,
+    TO_VARCHAR(ETAYEAR) as ETAYEAR,
     ONORDERQTY
     from {{ source('analytics', 'prodorders') }}
 )
